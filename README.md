@@ -1,1 +1,2 @@
-# Practice-problems
+# OCJA
+ currently learning REACT JS
