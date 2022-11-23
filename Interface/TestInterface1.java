@@ -1,17 +1,14 @@
-//Interface declaration: by first user  
-interface Drawable{  
-void draw();  
+interface Bank{  
+float rateOfInterest();  
 }  
-//Implementation: by second user  
-class Rectangle implements Drawable{  
-public void draw(){System.out.println("drawing rectangle");}  
+class SBI implements Bank{  
+public float rateOfInterest(){return 9.15f;}  
 }  
-class Circle implements Drawable{  
-public void draw(){System.out.println("drawing circle");}  
+class PNB implements Bank{  
+public float rateOfInterest(){return 9.7f;}  
 }  
-//Using interface: by third user  
-class TestInterface1{  
-public static void main(String args[]){  
-Drawable d=new Circle();//In real scenario, object is provided by method e.g. getDrawable()  
-d.draw();  
-}}
+class TestInterface2{  
+public static void main(String[] args){  
+Bank b=new SBI();  
+System.out.println("ROI: "+b.rateOfInterest());  
+}}  
